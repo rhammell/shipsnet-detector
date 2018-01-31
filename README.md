@@ -1,5 +1,5 @@
 # shipsnet-detector
-This repository contains scripts that enable the automatic detection of aircraft in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are files which define a machine learning model, train it using the Planesnet dataset, and apply it across an entire image scene to highlight aircraft detections.
+This repository contains scripts that enable the automatic detection of container ships in [Planet](https://www.planet.com/) imagery using machine learning techniques. Included are files which define a machine learning model, train it using the ShipsNet dataset, and apply it across an entire image scene to highlight ship detections.
 
 ## Methodology
 [ShipsNet](https://www.kaggle.com/rhammell/ships-in-satellite-imagery) is a labeled training dataset consiting of image chips extracted from Planet satellite imagery. It contains hundreds of 80x80 pixel RGB image chips labeled with either a "ship" or "no-ship" classification. Machine learning models can be trained against this data to classify any given input chip into either one of these classes. 
