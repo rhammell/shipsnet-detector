@@ -1,0 +1,5 @@
+shipsnet.json
+*.pyc
+
+models/
+images/*_detection.png
