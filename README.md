@@ -19,14 +19,15 @@ Python 3.5+ is required for compatability with all required modules
 
 ```bash
 # Clone this repository
-git clone https://github.com/rhammell/planesnet-detector.git
+git clone https://github.com/rhammell/shipsnet-detector.git
 
 # Go into the repository
-cd planesnet-detector
+cd shipsnet-detector
 
 # Install required modules
 pip install -r requirements.txt
 ```
+
 ## Model
 A convolutional neural network (CNN) is defined within the `model.py` module using the [TFLearn](http://tflearn.org/) library. This model supports the 80x80x3 input dimensions of the ShipsNet image data.
 
@@ -38,13 +39,13 @@ The defined CNN can be trained with the JSON version of the ShipsNet dataset and
 mkdir models
 python train.py "shipsnet.json" "models/model.tfl"
 ```
-The latest version of `shipsnet.json` is available through the [ShipsNet](https://www.kaggle.com/rhammell/ships-in-satellite-imagery) Kaggle page, which also has information describing the dataset layout. 
+
+The latest version of `shipsnet.json` is available through the [ShipsNet](https://www.kaggle.com/rhammell/ships-in-satellite-imagery) Kaggle page, which has further information describing the dataset layout. 
 
 ## Detector
 A trained model can be applied across entire images using the sliding window detector function `detector.py`, which takes the model file path, input image path, and optional output image path as arguments. The output image will cluster positive detections and draw a bounding box around their center point. 
 
 Example images are contained in the `images` directory. 
-
 ```bash
 # Run on demo image with default output path
 python detector.py "models/model.tfl" "images/scene_1.png"

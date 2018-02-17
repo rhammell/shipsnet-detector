@@ -1,4 +1,4 @@
-shipsnet.json
+*.json
 *.pyc
 
 models/
